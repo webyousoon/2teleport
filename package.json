@@ -1,0 +1,22 @@
+{
+  "name": "2teleport",
+  "version": "0.0.1",
+  "description": "Un utilitaire pour écouter la mise à jour de fichiers dans une arborescence et les copier dans une autre arborescence.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webyousoon/2teleport"
+  },
+  "author": "Alvin Berthelot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webyousoon/2teleport/issues"
+  },
+  "homepage": "https://github.com/webyousoon/2teleport",
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  }
+}
