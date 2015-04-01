@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/webyousoon/2teleport",
   "devDependencies": {
-    "gulp": "^3.8.11"
+    "gulp": "^3.8.11",
+    "gulp-watch": "^4.2.2"
   }
 }

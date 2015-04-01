@@ -1,5 +1,6 @@
 // dépendances
 var gulp = require('gulp');
+var watch = require('gulp-watch');
 
 // variables
 var basePaths = {
@@ -22,6 +23,16 @@ var paths = {
 };
 
 // ******************************************
+// WATCH TASKS
+// ******************************************
+
+gulp.task('watch-android', function () {
+  watch(basePaths.src + paths.android.src, function () {
+    gulp.start('copy-sketch-2-android');
+  });
+});
+
+// ******************************************
 // COPY TASKS
 // ******************************************
 
@@ -34,4 +45,4 @@ gulp.task('copy-sketch-2-android', function () {
 // MASTER TASKS
 // ******************************************
 
-gulp.task('default', ['copy-sketch-2-android']);
+gulp.task('default', ['watch-android']);
