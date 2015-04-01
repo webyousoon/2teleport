@@ -1,6 +1,7 @@
 // dépendances
 var gulp = require('gulp');
 var watch = require('gulp-watch');
+var del = require('del');
 
 // variables
 var basePaths = {
@@ -10,7 +11,7 @@ var basePaths = {
 var paths = {
   android: {
       src: 'android/**/*',
-      dest: 'app/src/main/res/drawable/',
+      dest: 'app/src/main/res/',
       sizes: [
         // 'ldpi,',
         'mdpi,',
@@ -21,6 +22,20 @@ var paths = {
       ]
   }
 };
+
+// ******************************************
+// CLEAN TASKS
+// ******************************************
+
+gulp.task('clean', function (cb) {
+  del([
+    // suppression complète dans le dossier source
+    basePaths.src + '*',
+    // excepté pour les fichiers Git
+    !basePaths.src + '.git',
+    !basePaths.src + '.gitignore'
+  ], cb);
+});
 
 // ******************************************
 // WATCH TASKS

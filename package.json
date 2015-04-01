@@ -19,5 +19,8 @@
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-watch": "^4.2.2"
+  },
+  "dependencies": {
+    "del": "^1.1.1"
   }
 }
