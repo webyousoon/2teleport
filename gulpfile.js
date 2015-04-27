@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 var watch = require('gulp-watch');
 var del = require('del');
+var taskListing = require('gulp-task-listing');
 
 // variables
 var basePaths = {
@@ -22,6 +23,12 @@ var paths = {
       ]
   }
 };
+
+// ******************************************
+// HELP TASKS
+// ******************************************
+
+gulp.task('help', taskListing);
 
 // ******************************************
 // CLEAN TASKS
@@ -60,4 +67,4 @@ gulp.task('copy-sketch-2-android', function () {
 // MASTER TASKS
 // ******************************************
 
-gulp.task('default', ['watch-android']);
+gulp.task('default', ['help']);
